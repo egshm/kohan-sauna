@@ -1,0 +1,80 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+  p-contact
+----------------------------------------*/
+.p-contact {
+  position: relative;
+}
+
+.p-contact::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c_mask);
+}
+
+.p-contact__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  width: calc((335 / 375) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  z-index: 1;
+}
+
+.p-contact__title {
+  --c_main: var(--c_white);
+  --c_sub: var(--c_white);
+  justify-content: center;
+}
+
+.p-contact__text {
+  color: var(--c_white);
+  line-height: 2;
+}
+
+.p-contact__btn {
+  --c_hover: #956d30; // ホバー時のボタン色
+  width: 335px;
+  padding: 1.286em 1.714em;
+}
+
+.p-contact__img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.p-contact__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-contact__inner {
+    gap: 41px;
+    width: calc((1016 / 1366) * 100%);
+    max-width: 1016px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .p-contact__text {
+    text-align: center;
+  }
+
+  .p-contact__btn {
+    width: 326px;
+    padding: 1.688em;
+  }
+}

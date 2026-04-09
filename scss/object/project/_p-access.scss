@@ -1,0 +1,90 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-access
+----------------------------------------*/
+.p-access__text {
+  font-size: var(--fz_14);
+  line-height: 2;
+}
+
+.p-access__text + .p-access__text {
+  margin-top: 16px;
+}
+
+.p-access__body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.p-access__map-wrap {
+  height: 200px;
+  margin-top: 20px;
+}
+
+.p-access__map {
+  height: 100%;
+  object-fit: cover;
+}
+
+// SPレイアウト
+@media (max-width: 767.98px) {
+  .p-access__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: calc((335 / 375) * 100%);
+    max-width: 620px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+        
+  .p-access__btn {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-access__bg-wrap {
+    display: none;
+  }
+}
+
+// PCレイアウト
+@media (min-width: 768px) {
+  .p-access__bg-wrap {
+    width: 100%;
+    height: 656px;
+  }
+
+  .p-access__bg {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .p-access__inner {
+    position: relative;
+  }
+
+  .p-access__body {
+    position: absolute;
+    top: 25px;
+    left: calc((175 / 1366) * 100%);
+    max-width: 504px;
+    padding: 32px;
+    background: var(--c_white);
+    z-index: 1;
+  }
+
+  .p-access__text {
+    font-size: fwd.make-clamp(14, 16, 768, 1366);
+  }
+}
+
+
+@media (min-width: 1366px) {
+  .p-access__body {
+    left: calc((100vw - 1191px) / 2);
+    transform: translateX(calc(((1366 - 1191) / 2)) * (1px));
+  }
+}
