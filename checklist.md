@@ -17,7 +17,7 @@
 |13|フォームの入力内容が適切に送信されること|N/A|N/A|フォームが無いため|
 |14|ハンバーガーメニューが見切れた時に縦スクロールできること|OK|2026/4/28||
 |15|`Title`と`Meta Description`が設定されていること<br><small>※ デスクトップアプリScreamingfrogにURLを入力して確認すること</small>|NG→OK|2026/4/28|`Title`に「トップ」を明記すべき→修正済み|
-|16|ファビコンが適切に表示されていること|OK|2026/4/28||
+|16|ファビコンが適切に表示されていること|OK|2026/5/5||
 |17|OGPが適切に設定されていること|N/A|N/A|OGPを設定していないため|
 |18|HTML/CSSでコーディングエラーが発生しないこと<br><small>※ The W3C Markup Validation Serviceを使用すること</small>|OK|2026/4/28||
 |19|レスポンシブチェック<br><small>※ Chrome拡張機能Responsive Viewerで確認</small>||||
