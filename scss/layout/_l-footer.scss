@@ -108,6 +108,25 @@
     writing-mode: vertical-rl;
   }
 
+  .l-footer__link:focus-visible {
+    position: relative;
+    outline: none;
+  }
+
+  // 縦書きテキストの場合、outlineのフォーカスリングが若干ずれるので、
+  // 疑似要素でフォーカスリングを実装し、transformで位置を調整する。
+  .l-footer__link:focus-visible::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    outline: 2px solid var(--c_focus);
+    transform: translate(-40%, -50%);
+  }
+
   .l-footer__text-wrap {
     letter-spacing: 0.02em;
   }

@@ -18,9 +18,11 @@
 }
 
 .c-btn-icon:focus-visible {
-  background: var(--c_base);
-  border: 2px solid currentColor;
   color: var(--c_bg);
+  background: var(--c_base);
+  border-radius: 50%;
+  outline-width: 4px;
+  outline-offset: -2px;
   transform: scale(1.2);
 }
 

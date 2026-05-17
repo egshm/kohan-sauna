@@ -35,8 +35,8 @@ a {
 }
 
 a:focus-visible {
-  border: none;
-  outline: none;
+  border-radius: 2px;
+  outline: 2px solid var(--c_focus);
 }
 
 img, svg {
@@ -80,8 +80,8 @@ button {
 }
 
 button:focus-visible {
-  border: none;
-  outline: none;
+  border-radius: 2px;
+  outline: 2px solid var(--c_focus);
 }
 
 select {

@@ -29,6 +29,16 @@
   @include fwd.underline-anim(".p-reservation__text > span");
 }
 
+.p-reservation__link:focus-visible {
+  outline: none;
+}
+
+.p-reservation__link:focus-visible .p-reservation__text {
+  border-radius: 2px;
+  outline: 2px solid var(--c_focus);
+  outline-offset: -2px;
+}
+
 .p-reservation__link:focus-visible .p-reservation__img {
     transform: scale(1.1);
 }
